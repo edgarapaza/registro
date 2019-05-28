@@ -1,0 +1,135 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <title>Registro</title>
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+    <!--<![endif]-->
+    <style>
+        body{
+            background-color: slategrey;
+            font-size: 16px;
+        }
+        input{
+            font-size: 1.2em;
+        }
+    .container {
+        background-color: beige;
+        max-width: 1224px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .cabecera{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="cabecera">
+            <h1>FORMATO DE LICENCIAMIENTO C</h1>
+            <H2>RELACION DE DOCENTES</H2>
+            <h2>UNIVERSIDAD NACIONAL DE JULIACA</h2>
+        </header>
+        <div>
+            <form action="controller/datos.php" method="POST" class="pure-form pure-form-aligned">
+                <fieldset>
+                    <h3>Datos del Docente</h3>
+                    <div class="pure-control-group">
+                        <label for="apepater">Apellido Paterno</label>
+                        <input type="text" name="apepater" id="apepater" required="required">
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="apemater">Apellido Materno</label>
+                        <input type="text" name="apemater" id="apemater" required="required">
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="nombres">Nombre(s): </label>
+                        <input type="text" name="nombres" id="nombres"><br required="required">
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="pais">Pais:</label>
+                        <input type="text" name="pais" id="pais" value="Peruano" required="required">
+                    </div>
+                    <div class="pure-control-group">
+                        <label for="numdni">Numero de DNI:</label>
+                        <input type="number" name="numdni" id="numdni" required="required">
+                    </div>
+                    <br>
+                    <h3>Datos Academicos del Docente</h3>
+                    <label for="fechaingresou">Fecha de Ingreso como Docente a la Universidad</label>
+                    <input type="date" name="fechaingresou" id="fechaingresou" required="required"><br>
+                    <label for="ley">¿ERA DOCENTE UNIVERSITARIO A LA ENTRADA EN VIGENCIA DE LA LEY 30220, LU?</label>
+                    <select name="ley" id="ley" class="form-control">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select><br>
+                    <label for="gradoacademico">Mayor Grado Academico del Docente:</label>
+                    <input type="text" name="gradoacademico" id="gradoacademico" required="required"><br>
+                    <label for="mencion">Mención del Mayor Grado Docente:</label>
+                    <input type="text" name="mencion" id="mencion" required="required"><br>
+                    <label for="universidad">Universidad que otorgó el Mayor Grado Docente:</label>
+                    <input type="text" name="universidad" id="universidad" required="required"><br>
+                    <label for="paisuniversidad">Pais / Universidad que otorgó el Mayor Grado del Docente:</label>
+                    <input type="text" name="paisuniversidad" id="paisuniversidad" required="required">
+                    <hr>
+                    <h3>NIVELES DE PROGRAMA DE ESTUDIO EN LOS QUE DA CLASES EL DOCENTE</h3>
+                    <label for="pregrado">PREGRADO</label>
+                    <select name="pregrado" id="pregrado">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select><br>
+                    <label for="pregrado">MAESTRIA</label>
+                    <select name="maestria" id="maestria">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select><br>
+                    <label for="pregrado">DOCTORADO</label>
+                    <select name="doctorado" id="doctorado">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select><br>
+                    <label for="catdocente">Categoria Docente</label>
+                    <input type="text" name="catdocente" id="catdocente" required="required"><br>
+                    <label for="regimen">Regimen de Dedicación</label>
+                    <input type="text" name="regimen" id="regimen" required="required">
+                    <hr>
+                    <h3>NÚMERO DE HORAS SEMANALES FIJADOS POR LA UNIVERSIDAD</h3>
+                    <label for="clases">Clases:</label>
+                    <input type="number" name="clases" id="clases" required="required"><br>
+                    <label for="otras">Otras Actividades:</label>
+                    <input type="number" name="otras" id="otras" required="required"><br>
+                    <label for="total">Total Horas semanales:</label>
+                    <input type="number" name="total" id="total" required="required"><br>
+                    <label for="investigador">Docente Investigador</label>
+                    <select name="investigador" id="investigador">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select><br>
+                    <label for="dina">Docente Registrado en DINA</label>
+                    <select name="dina" id="dina">
+                        <option value="Si">Si</option>
+                        <option value="No">No</option>
+                    </select><br>
+                    <label for="periodo">Periodo Académico:</label>
+                    <input type="text" name="periodo" id="periodo" required="required"><br>
+                    <label for="obs">Observaciones</label><br>
+                    <textarea name="obs" id="obs" cols="60" rows="5"></textarea>
+                    <br>
+                    <br>
+                    <button type="submit" id="btnGuardar" class="pure-button pure-button-primary">Guardar</button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -111,6 +111,9 @@ $data = $docente->Listado();
                 ?>
             </tbody>
         </table>
+        <form method="post" action="export.php">
+            <input type="submit" name="export" class="btn btn-success" value="Export" />
+        </form>
     </div>
 </body>
 </html>
